@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.get("/", (req, res) => {
-    return res.json({ message: "Server is healthy v4.1 ", status: 'Github A ction' })
+    return res.json({ message: "Server is healthy v5.1 ", status: 'Github Action hurray' })
 });
 
 app.listen(port, () => {

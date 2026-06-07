@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.get("/", (req, res) => {
-    return res.json({ message: "Server is running successfully" })
+    return res.json({ message: "Server is healthy v3.1 " })
 });
 
 app.listen(port, () => {

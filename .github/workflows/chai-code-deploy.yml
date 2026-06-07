@@ -19,6 +19,8 @@ jobs:
           username: ubuntu
           key: ${{secrets.PRIVATE_KEY}}
           script: |
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             cd /home/ubuntu/chai_node_cicd_server_aplication
             git pull
             npm install

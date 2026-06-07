@@ -37,11 +37,11 @@ jobs:
           key: ${{secrets.PRIVATE_KEY}}
           script: |
             # kill the existing docker container
-            docker rm -f chaicode-node || true
+            sudo docker rm -f chaicode-node || true
             # Again pull the fresh image from hub
-            docker pull tohidul742/chaicode_node:latest
+            sudo docker pull tohidul742/chaicode_node:latest
             # Run docker run -d -p 3000:3000 tohidul742/chaicode_node
-            docker run -d -p 3000:3000 --name chaicode-node --restart unless-stopped tohidul742/chaicode_node
+            sudo docker run -d -p 3000:3000 --name chaicode-node --restart unless-stopped tohidul742/chaicode_node
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             cd /home/ubuntu/chai_node_cicd_server_aplication
